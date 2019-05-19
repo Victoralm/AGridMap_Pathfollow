@@ -1,6 +1,6 @@
 # Godot pathfollow test
 
-My attempt to create, with [**Godot**](https://godotengine.org/) 3.x, living NPCs that can walk around the map.
+My attempt to create, with [**Godot**](https://godotengine.org/) 3.1, living NPCs that can walk around the map.
 
 ## Scenes
 
