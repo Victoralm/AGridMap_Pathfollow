@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/MeshConverted/Floor_navigationmesh.tres" type="NavigationMesh" id=1]
+[ext_resource path="res://assets/MeshConverted/Floor_arraymesh.tres" type="ArrayMesh" id=2]
+
+[sub_resource type="ConvexPolygonShape" id=1]
+points = PoolVector3Array( -1, 0.1, -1, 1, 0.1, 1, 1, 0.1, -1, 1, 0.1, 1, -1, 0, 1, 1, 0, 1, -1, 0.1, 1, -1, 0, -1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0.1, -1, 1, 0, 1, 1, 0, -1, -1, 0.1, -1, 1, 0, -1, -1, 0, -1, -1, 0.1, 1, -1, 0.1, 1, -1, 0.1, -1, 1, 0, 1, 1, 0.1, 1, 1, 0.1, -1 )
+
+[node name="Floor_wNavmesh" type="NavigationMeshInstance"]
+navmesh = ExtResource( 1 )
+
+[node name="Floor" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="Floor"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor/StaticBody"]
+shape = SubResource( 1 )
